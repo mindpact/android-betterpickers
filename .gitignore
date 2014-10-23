@@ -1,27 +1,43 @@
+# built application files
 *.apk
 *.ap_
+
+# files for the dex VM
 *.dex
+
+# Java class files
 *.class
-*.iml
-.gitignore~
-.idea/
-.DS_STORE
-.classpath
-.settings/
+
+# generated files
 bin/
 gen/
-local.properties
-target/
-classes/
-gen-external-apklibs/
 out/
-tmp/
-.project
-target
-release.properties
-pom.xml.*
+build/
 
-#Command line
+# Local configuration file (sdk path, etc)
 local.properties
-build.xml
-proguard-project.txt
+
+# Eclipse project files
+.classpath
+.project
+
+# Windows thumbnail db
+.DS_Store
+
+# IDEA/Android Studio project files, because
+# the project can be imported from settings.gradle
+.idea
+*.iml
+
+# Old-style IDEA project files
+*.ipr
+*.iws
+
+# Local IDEA workspace
+.idea/workspace.xml
+
+# Gradle cache
+.gradle
+
+# File system
+.DS_Store
