@@ -16,18 +16,13 @@
 
 package com.doomonafireball.betterpickers.radialtimepicker;
 
-import com.doomonafireball.betterpickers.HapticFeedbackController;
-import com.doomonafireball.betterpickers.R;
-import com.doomonafireball.betterpickers.Utils;
-import com.doomonafireball.betterpickers.radialtimepicker.RadialPickerLayout.OnValueSelectedListener;
-import com.nineoldandroids.animation.ObjectAnimator;
-
+import android.animation.ObjectAnimator;
 import android.app.ActionBar.LayoutParams;
+import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.support.v4.app.DialogFragment;
 import android.util.Log;
 import android.view.KeyCharacterMap;
 import android.view.KeyEvent;
@@ -39,6 +34,11 @@ import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
+import com.doomonafireball.betterpickers.HapticFeedbackController;
+import com.doomonafireball.betterpickers.R;
+import com.doomonafireball.betterpickers.Utils;
+import com.doomonafireball.betterpickers.radialtimepicker.RadialPickerLayout.OnValueSelectedListener;
 
 import java.text.DateFormatSymbols;
 import java.util.ArrayList;
@@ -658,7 +658,7 @@ public class RadialTimePickerDialog extends DialogFragment implements OnValueSel
     /**
      * Get out of keyboard mode. If there is nothing in typedTimes, revert to TimePicker's time.
      *
-     * @param changeDisplays If true, update the displays with the relevant time.
+     * @param updateDisplays If true, update the displays with the relevant time.
      */
     private void finishKbMode(boolean updateDisplays) {
         mInKbMode = false;

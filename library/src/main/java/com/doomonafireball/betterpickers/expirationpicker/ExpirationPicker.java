@@ -1,9 +1,5 @@
 package com.doomonafireball.betterpickers.expirationpicker;
 
-import com.doomonafireball.betterpickers.R;
-import com.doomonafireball.betterpickers.widget.UnderlinePageIndicatorPicker;
-import com.doomonafireball.betterpickers.datepicker.DatePicker;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
@@ -23,8 +19,11 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 
-import java.util.Calendar;
+import com.doomonafireball.betterpickers.R;
+import com.doomonafireball.betterpickers.datepicker.DatePicker;
+import com.doomonafireball.betterpickers.widget.UnderlinePageIndicatorPicker;
 
+import java.util.Calendar;
 
 public class ExpirationPicker extends LinearLayout implements Button.OnClickListener,
         Button.OnLongClickListener {

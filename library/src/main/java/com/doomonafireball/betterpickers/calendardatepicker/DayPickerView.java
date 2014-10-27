@@ -16,10 +16,6 @@
 
 package com.doomonafireball.betterpickers.calendardatepicker;
 
-import com.doomonafireball.betterpickers.Utils;
-import com.doomonafireball.betterpickers.calendardatepicker.CalendarDatePickerDialog.OnDateChangedListener;
-import com.doomonafireball.betterpickers.calendardatepicker.MonthAdapter.CalendarDay;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Build;
@@ -34,6 +30,10 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.ListView;
+
+import com.doomonafireball.betterpickers.Utils;
+import com.doomonafireball.betterpickers.calendardatepicker.CalendarDatePickerDialog.OnDateChangedListener;
+import com.doomonafireball.betterpickers.calendardatepicker.MonthAdapter.CalendarDay;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -167,7 +167,7 @@ public abstract class DayPickerView extends ListView implements OnScrollListener
      * the first of the month containing the time is at the top of the view. If the new time is already in view the list
      * will not be scrolled unless forceScroll is true. This time may optionally be highlighted as selected as well.
      *
-     * @param time The time to move to
+     * @param day The day to move to
      * @param animate Whether to scroll to the given time or just redraw at the new location
      * @param setSelected Whether to set the given time as selected
      * @param forceScroll Whether to recenter even if the time is already visible
