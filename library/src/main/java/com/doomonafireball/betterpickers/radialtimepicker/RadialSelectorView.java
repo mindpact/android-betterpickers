@@ -145,10 +145,10 @@ public class RadialSelectorView extends View {
         Resources res = context.getResources();
         int color;
         if (themeDark) {
-            color = res.getColor(R.color.red);
+            color = res.getColor(android.R.color.holo_blue_dark);
             mSelectionAlpha = SELECTED_ALPHA_THEME_DARK;
         } else {
-            color = res.getColor(R.color.blue);
+            color = res.getColor(android.R.color.holo_blue_light);
             mSelectionAlpha = SELECTED_ALPHA;
         }
         mPaint.setColor(color);

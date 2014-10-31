@@ -216,8 +216,8 @@ public class RadialTimePickerDialog extends DialogFragment implements OnValueSel
         mSelectHours = res.getString(R.string.select_hours);
         mMinutePickerDescription = res.getString(R.string.minute_picker_description);
         mSelectMinutes = res.getString(R.string.select_minutes);
-        mSelectedColor = res.getColor(mThemeDark ? R.color.red : R.color.blue);
-        mUnselectedColor = res.getColor(mThemeDark ? R.color.white : R.color.numbers_text_color);
+        mSelectedColor = res.getColor(mThemeDark ? android.R.color.holo_blue_dark : android.R.color.holo_blue_light);
+        mUnselectedColor = res.getColor(mThemeDark ? R.color.default_light_gray : R.color.numbers_text_color);
 
         mHourView = (TextView) view.findViewById(R.id.hours);
         mHourView.setOnKeyListener(keyboardListener);
@@ -333,28 +333,29 @@ public class RadialTimePickerDialog extends DialogFragment implements OnValueSel
         // Set the theme at the end so that the initialize()s above don't counteract the theme.
         mTimePicker.setTheme(getActivity().getApplicationContext(), mThemeDark);
         // Prepare some colors to use.
-        int white = res.getColor(R.color.white);
-        int circleBackground = res.getColor(R.color.circle_background);
-        int line = res.getColor(R.color.line_background);
-        int timeDisplay = res.getColor(R.color.numbers_text_color);
-        ColorStateList doneTextColor = res.getColorStateList(R.color.done_text_color);
-        int doneBackground = R.drawable.done_background_color;
+        int circleBackgroundLight = res.getColor(R.color.default_circle_background_light);
+        int lineLight = res.getColor(R.color.line_background);
+        int timeDisplayLight = res.getColor(R.color.default_time_display_background_light);
+        int timeDisplayTextLight = res.getColor(R.color.default_time_display_text_color_light);
+        ColorStateList doneTextColorLight = res.getColorStateList(R.color.done_text_color);
+        int doneBackgroundLight = R.drawable.done_background_color;
 
-        int darkGray = res.getColor(R.color.dark_gray);
-        int lightGray = res.getColor(R.color.light_gray);
-        int darkLine = res.getColor(R.color.line_dark);
-        ColorStateList darkDoneTextColor = res.getColorStateList(R.color.done_text_color_dark);
-        int darkDoneBackground = R.drawable.done_background_color_dark;
+        int circleBackgroundDark = res.getColor(R.color.default_circle_background_dark);
+        int lineDark = res.getColor(R.color.line_dark);
+        int timeDisplayDark = res.getColor(R.color.default_time_display_background_dark);
+        int timeDisplayTextDark = res.getColor(R.color.default_time_display_text_color_dark);
+        ColorStateList doneTextColorDark = res.getColorStateList(R.color.done_text_color_dark);
+        int doneBackgroundDark = R.drawable.done_background_color_dark;
 
         // Set the colors for each view based on the theme.
-        view.findViewById(R.id.time_display_background).setBackgroundColor(mThemeDark ? darkGray : white);
-        view.findViewById(R.id.time_display).setBackgroundColor(mThemeDark ? darkGray : white);
-        ((TextView) view.findViewById(R.id.separator)).setTextColor(mThemeDark ? white : timeDisplay);
-        ((TextView) view.findViewById(R.id.ampm_label)).setTextColor(mThemeDark ? white : timeDisplay);
-        view.findViewById(R.id.line).setBackgroundColor(mThemeDark ? darkLine : line);
-        mDoneButton.setTextColor(mThemeDark ? darkDoneTextColor : doneTextColor);
-        mTimePicker.setBackgroundColor(mThemeDark ? lightGray : circleBackground);
-        mDoneButton.setBackgroundResource(mThemeDark ? darkDoneBackground : doneBackground);
+        view.findViewById(R.id.time_display_background).setBackgroundColor(mThemeDark ? timeDisplayDark : timeDisplayLight);
+        view.findViewById(R.id.time_display).setBackgroundColor(mThemeDark ? timeDisplayDark : timeDisplayLight);
+        ((TextView) view.findViewById(R.id.separator)).setTextColor(mThemeDark ? timeDisplayTextDark : timeDisplayTextLight);
+        ((TextView) view.findViewById(R.id.ampm_label)).setTextColor(mThemeDark ? timeDisplayTextDark : timeDisplayTextDark);
+        view.findViewById(R.id.line).setBackgroundColor(mThemeDark ? lineDark : lineLight);
+        mDoneButton.setTextColor(mThemeDark ? doneTextColorDark : doneTextColorLight);
+        mTimePicker.setBackgroundColor(mThemeDark ? circleBackgroundDark : circleBackgroundLight);
+        mDoneButton.setBackgroundResource(mThemeDark ? doneBackgroundDark : doneBackgroundLight);
         return view;
     }
 

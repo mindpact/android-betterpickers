@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="transparent">#00000000</color>
-    <color name="default_text_color_holo_dark">#ffffffff</color>
+    <color name="default_text_color_holo_dark">#ffB4B4B4</color>
     <color name="default_text_color_holo_dark_disabled">#ff4c4c4c</color>
     <color name="default_divider_color_dark">#28ffffff</color>
     <color name="default_button_background_dark">#00000000</color>
     <color name="default_button_background_pressed_dark">#46c5c1ff</color>
     <color name="default_keyboard_indicator_color_dark">#ff33b5e5</color>
+
+    <color name="default_circle_background_dark">#ff232323</color>
+    <color name="default_time_display_background_dark">#ff282828</color>
+    <color name="default_time_display_text_color_dark">#ff4c4c4c</color>
+    <color name="ampm_text_color_dark">#ff828282</color>
+    <color name="done_text_color_dark_normal">#ffffffff</color>
+    <color name="done_text_color_dark_disabled">#ff888888</color>
+    <color name="done_button_background_dark">#ff282828</color>
+    <color name="done_button_background_pressed_dark">#ff232323</color>
+    <color name="done_disabled_dark">#ffbfbfbf</color>
+
 
     <color name="default_text_color_holo_light">#ff000000</color>
     <color name="default_text_color_holo_light_disabled">#ffb2b2b2</color>
@@ -15,10 +26,14 @@
     <color name="default_button_background_pressed_light">#ff00ddff</color>
     <color name="default_keyboard_indicator_color_light">#ff00ddff</color>
 
+    <color name="default_circle_background_light">#fff2f2f2</color>
+    <color name="default_time_display_background_light">#ffffffff</color>
+    <color name="default_time_display_text_color_light">#ff292929</color>
+    <color name="ampm_text_color_light">#8c8c8c</color>
+
     <color name="white">#ffffff</color>
     <color name="circle_background">#f2f2f2</color>
     <color name="line_background">#cccccc</color>
-    <color name="ampm_text_color">#8c8c8c</color>
     <color name="done_text_color_normal">#000000</color>
     <color name="done_text_color_disabled">#cccccc</color>
     <color name="numbers_text_color">#8c8c8c</color>
@@ -34,15 +49,10 @@
     <color name="date_picker_view_animator">#f2f2f2</color>
     <color name="calendar_selected_date_text">#ffd1d2d4</color>
 
-    <!-- Colors for red theme -->
-    <color name="red">#ff3333</color>
-    <color name="red_focused">#853333</color>
-    <color name="light_gray">#404040</color>
-    <color name="dark_gray">#363636</color>
-    <color name="line_dark">#808080</color>
-    <color name="done_text_color_dark_normal">#ffffff</color>
-    <color name="done_text_color_dark_disabled">#888888</color>
-    <color name="done_disabled_dark">#bfbfbf</color>
+    <color name="default_light_gray">#ff828282</color>
+    <color name="default_gray">#ff282828</color>
+    <color name="default_dark_gray">#ff232323</color>
+    <color name="line_dark">#ff808080</color>
 
     <color name="recurrence_picker_background">#fff2f2f2</color>
     <color name="recurrence_bubble_text_normal">#ff737373</color>
